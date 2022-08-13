@@ -299,7 +299,7 @@ def edit_artist_submission(artist_id):
             if 'seeking_description' in request.form:
                 seeking_description = request.form['seeking_description']
             setattr(artist_getdataByid, 'name', request.form['name'])
-            setattr(artist_getdataByid, 'genres', request.form['genres'])
+            setattr(artist_getdataByid, 'genres', request.form.getlist('genres'))
             setattr(artist_getdataByid, 'city', request.form['city'])
             setattr(artist_getdataByid, 'state', request.form['state'])
             setattr(artist_getdataByid, 'phone', request.form['phone'])
