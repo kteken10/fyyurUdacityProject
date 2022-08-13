@@ -198,7 +198,7 @@ def delete_venue(venue_id):
     flash('Record Venue Delete success')
   except:
     db.session.rollback() 
-    flash('Cannot Delete Record')
+    flash('Cannot Delete Record Because they are already linked to an Show ')
   finally:
     db.session.close()
 
